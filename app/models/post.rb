@@ -1,4 +1,4 @@
 class Post < ApplicationRecord
-    before_action :authenticate_user!
+    before_commit :authenticate_user!
     belongs_to :user
 end
