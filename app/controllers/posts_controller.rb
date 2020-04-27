@@ -1,7 +1,10 @@
 class PostsController < ApplicationController
   before_action :authenticate_user!
   def index
-    @list = Post.all
+    
+    @list=User.joins(:posts).select("posts.title, Posts.content,users.email")
+    
+
   end
 
   def new
