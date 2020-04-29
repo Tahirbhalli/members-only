@@ -1,0 +1,10 @@
+<h1>Posts List:</h1>
+<br>
+<%= link_to "new post" , new_post_path%>
+<% @list.each do |v| %>
+<p><%= v.title %></p>
+<p><%= v.content %></p>
+<p><%= v.email %></p>
+<br>
+
+<% end %>
